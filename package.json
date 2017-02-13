@@ -1,0 +1,25 @@
+{
+  "name": "hapi-page-view",
+  "version": "1.0.0",
+  "description": "Library for composing web-page views",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "lab.cmd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mickelindahl/hapi_page_view.git"
+  },
+  "keywords": [
+    "view",
+    "pages",
+    "web-pages",
+    "hapi"
+  ],
+  "author": "Mikael Lindahl <mikael.lindahl.07@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mickelindahl/hapi_page_view/issues"
+  },
+  "homepage": "https://github.com/mickelindahl/hapi_page_view#readme"
+}
