@@ -559,7 +559,7 @@
           <div class="failures">0</div>
           <div class="skipped">0</div>
           <div class="test-count">2</div>
-          <div class="duration">75</div>
+          <div class="duration">89</div>
       </div>
       <div id="filters">
           <input type="checkbox" checked="" onchange="filter(this)" value="success" id="show-success">
@@ -584,14 +584,14 @@
               <td class="test-title">hapi page view Test getOrchestraView
                   
               </td>
-              <td class="test-duration">51</td>
+              <td class="test-duration">63</td>
           </tr>
           <tr class="show hapi_page_view success">
               <td class="test-id">2</td>
-              <td class="test-title">hapi page view Test getOrchestraView with callbacks, exclude, no raw.html
+              <td class="test-title">hapi page view Test getOrchestraView with callbacks, exclude, include, no raw.html and params
                   
               </td>
-              <td class="test-duration">21</td>
+              <td class="test-duration">22</td>
           </tr>
           </tbody>
       </table>
@@ -600,8 +600,8 @@
         <h1>Code Coverage Report</h1>
         <div class="stats high">
             <div class="percentage">100%</div>
-            <div class="sloc">204</div>
-            <div class="hits">204</div>
+            <div class="sloc">214</div>
+            <div class="hits">214</div>
             <div class="misses">0</div>
         </div>
         <div id="files">
@@ -609,8 +609,8 @@
                 <h2 id="lib/index.js">lib/index.js</h2>
                 <div class="stats high">
                     <div class="percentage">100%</div>
-                    <div class="sloc">92</div>
-                    <div class="hits">92</div>
+                    <div class="sloc">100</div>
+                    <div class="hits">100</div>
                     <div class="misses">0</div>
                 </div>
                 <table>
@@ -663,7 +663,7 @@
                             <td class="line" data-tooltip>7</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
-                            <td class="source">const fs &#x3D; require( &#x27;fs-extra&#x27; );</td>
+                            <td class="source">const fs &#x3D; require( &#x27;fs&#x27; );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>8</td>
@@ -716,8 +716,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>16</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">let _evokeCallbacks &#x3D; ( request, options ) &#x3D;&gt; {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">/**@module server.methods.handler */</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>17</td>
@@ -728,8 +728,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>18</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">    let promise &#x3D; Promise.resolve();</td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">let _evokeCallbacks &#x3D; ( request, options ) &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>19</td>
@@ -740,8 +740,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>20</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">    if ( ! options.callbacks ) {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">    let promise &#x3D; Promise.resolve();</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>21</td>
@@ -752,8 +752,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>22</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">        return promise</td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">    if ( ! options.callbacks ) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>23</td>
@@ -764,8 +764,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>24</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">    }</td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">        return promise</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>25</td>
@@ -776,8 +776,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>26</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">    options.callbacks.forEach( call &#x3D;&gt; {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">    }</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>27</td>
@@ -788,8 +788,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>28</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">        promise &#x3D; promise.then( () &#x3D;&gt; {</td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">    options.callbacks.forEach( call &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>29</td>
@@ -801,31 +801,31 @@
                             <td class="line" data-tooltip>30</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            return new Promise( resolve &#x3D;&gt; {</td>
+                            <td class="source">        promise &#x3D; promise.then( () &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>31</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                call( request, options, resolve )</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>32</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            } );</td>
+                            <td class="source">            return new Promise( resolve &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>33</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">                call( request, options.params, resolve )</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>34</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        } )</td>
+                            <td class="source">            } );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>35</td>
@@ -837,7 +837,7 @@
                             <td class="line" data-tooltip>36</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    } );</td>
+                            <td class="source">        } )</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>37</td>
@@ -848,8 +848,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>38</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">    return promise</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">    } );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>39</td>
@@ -860,8 +860,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>40</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">};</td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">    return promise</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>41</td>
@@ -873,127 +873,127 @@
                             <td class="line" data-tooltip>42</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">};</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>43</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">/**</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>44</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> *  Create a view by composing files in the  &#x60;templates&#x60; directory</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>45</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> *  through the &#x60;director.html&#x60;</td>
+                            <td class="source">/**</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>46</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> *</td>
+                            <td class="source"> *  Create a view by composing files in the  &#x60;templates&#x60; directory</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>47</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> * - &#x60;options&#x60; Object with the following keys</td>
+                            <td class="source"> *  through the &#x60;director.html&#x60;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>48</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> *   - &#x60;callbacks&#x60; Array with functions &#x60;function(request, params, done)</td>
+                            <td class="source"> *</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>49</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> *   - &#x60;exclude&#x60; String [optional] Name of part files to exclude (without &#x60;.html&#x60; ending)</td>
+                            <td class="source"> * - &#x60;options&#x60; Object with the following keys</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>50</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> *   - &#x60;name&#x60; String [required] hapijs server request object</td>
+                            <td class="source"> *   - &#x60;callbacks&#x60; Array with functions &#x60;function(request, params, done)</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>51</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> *   - &#x60;params&#x60; Object with keys with values that are made avialable to templates in handlebar compilation</td>
+                            <td class="source"> *   - &#x60;exclude&#x60; String [optional] Name of part files to exclude (without &#x60;.html&#x60; ending)</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>52</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> *</td>
+                            <td class="source"> *   - &#x60;include&#x60; String [optional] Name of part files to include (without &#x60;.html&#x60; ending)</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>53</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> * @returns {Promise}</td>
+                            <td class="source"> *   - &#x60;name&#x60; String [required] hapijs server request object</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>54</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"> */</td>
+                            <td class="source"> *   - &#x60;params&#x60; Object with keys with values that are made avialable to templates in handlebar compilation</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>55</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">function getOrchestraView( options ) {</td>
+                            <td class="source"> *</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>56</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source"> * @returns {Promise}</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>57</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">    return ( request, reply ) &#x3D;&gt; {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"> */</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>58</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">function getOrchestraView( options ) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>59</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        _evokeCallbacks( request, options ).then( () &#x3D;&gt; {</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>60</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">    options.params &#x3D; options.params || {};</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>61</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            let name &#x3D; options.name;</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>62</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>2</td>
-                            <td class="source">            let templates &#x3D; JSON.parse( JSON.stringify( _templates ) ); //copy</td>
+                            <td class="source">    return ( request, reply ) &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>63</td>
@@ -1004,8 +1004,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>64</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            templates.push( name );</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">        debug(&#x27;getOrchestraView&#x27;);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>65</td>
@@ -1017,97 +1017,97 @@
                             <td class="line" data-tooltip>66</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>2</td>
-                            <td class="source">            let view_options &#x3D; {};</td>
+                            <td class="source">        _evokeCallbacks( request, options ).then( () &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>67</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            let page;</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>68</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            let file;</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">            let name &#x3D; options.name;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>69</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            let templates &#x3D; JSON.parse( JSON.stringify( _templates ) ); //copy</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>70</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            templates.forEach( s &#x3D;&gt; {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>71</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            templates.push( name );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>72</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                if ( options.exclude &amp;&amp; options.exclude.indexOf( s ) !&#x3D; -1 ) {</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>73</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">                    return</td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            if (options.include){</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>74</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                }</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>75</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">                templates.concat(options.include)</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>76</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>13</td>
-                            <td class="source">                if ( s &#x3D;&#x3D; name ) {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>77</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">            }</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>78</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">                    file &#x3D; path.join( _paths.views, _paths.pages, s + &#x27;.html&#x27; );</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>79</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>2</td>
-                            <td class="source">                    s &#x3D; &#x27;body&#x27;;</td>
+                            <td class="source">            let view_options &#x3D; {};</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>80</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            let page;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>81</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">                } else {</td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            let file;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>82</td>
@@ -1118,8 +1118,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>83</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>11</td>
-                            <td class="source">                    file &#x3D; path.join( _paths.views, _paths.templates, s + &#x27;.html&#x27; );</td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            debug(&#x27;getOrchestraView&#x27;, templates);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>84</td>
@@ -1130,8 +1130,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>85</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">                }</td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            templates.forEach( s &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>86</td>
@@ -1142,50 +1142,50 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>87</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>13</td>
-                            <td class="source">                if ( !fs.existsSync( file ) ) {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                if ( options.exclude &amp;&amp; options.exclude.indexOf( s ) !&#x3D; -1 ) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>88</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>89</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">                    return</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>90</td>
+                            <td class="line" data-tooltip>89</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">                }</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>91</td>
+                            <td class="line" data-tooltip>90</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>91</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>12</td>
+                            <td class="source">                if ( s &#x3D;&#x3D; name ) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>92</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>12</td>
-                            <td class="source">                debug(file);</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>93</td>
-                            <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
+                            <td class="line" data-tooltip>93</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">                    file &#x3D; path.join( _paths.views, _paths.pages, s + &#x27;.html&#x27; );</td>
+                        </tr>
+                        <tr class="hit">
                             <td class="line" data-tooltip>94</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>12</td>
-                            <td class="source">                page &#x3D; fs.readFileSync( file ).toString();</td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">                    s &#x3D; &#x27;body&#x27;;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>95</td>
@@ -1196,8 +1196,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>96</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>12</td>
-                            <td class="source">                view_options[s] &#x3D; handlebars.compile( page )( options.params );</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                } else {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>97</td>
@@ -1208,8 +1208,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>98</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">            } );</td>
+                            <td class="hits" data-tooltip>10</td>
+                            <td class="source">                    file &#x3D; path.join( _paths.views, _paths.templates, s + &#x27;.html&#x27; );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>99</td>
@@ -1221,19 +1221,19 @@
                             <td class="line" data-tooltip>100</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            // Add uncompiled template file</td>
+                            <td class="source">                }</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>101</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            let file_raw &#x3D; path.join( _paths.views, _paths.templates, &#x27;raw.html&#x27; );</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>102</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            if ( fs.existsSync( file_raw ) ) {</td>
+                            <td class="hits" data-tooltip>12</td>
+                            <td class="source">                if ( !fs.existsSync( file ) ) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>103</td>
@@ -1245,157 +1245,157 @@
                             <td class="line" data-tooltip>104</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
-                            <td class="source">                view_options.templates &#x3D; fs.readFileSync( file_raw ).toString();</td>
+                            <td class="source">                    return</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>105</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">                }</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>106</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            }</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>107</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>11</td>
+                            <td class="source">                debug(&#x27;getOrchestraView&#x27;, file);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>108</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            reply.view( &#x27;director&#x27;, view_options )</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>109</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>11</td>
+                            <td class="source">                page &#x3D; fs.readFileSync( file ).toString();</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>110</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        } )</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>111</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">    }</td>
+                            <td class="hits" data-tooltip>11</td>
+                            <td class="source">                view_options[s] &#x3D; handlebars.compile( page )( options.params );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>112</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">}</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>113</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">            } );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>114</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">exports.register &#x3D; function ( server, options, next ) {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>115</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">            // Add uncompiled template file</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>116</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">    _templates &#x3D; options.templates || [&#x27;head&#x27;, &#x27;nav&#x27;, &#x27;icons&#x27;, &#x27;footer&#x27;, &#x27;scripts&#x27;, &#x27;raw&#x27;];</td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            let file_raw &#x3D; path.join( _paths.views, _paths.templates, &#x27;raw.html&#x27; );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>117</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>2</td>
-                            <td class="source">    _paths &#x3D; options.paths || {</td>
+                            <td class="source">            if ( fs.existsSync( file_raw ) ) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>118</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            director: &#x27;orchestra/&#x27;,</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>119</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">            templates: &#x27;orchestra/templates/&#x27;,</td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">                view_options.templates &#x3D; fs.readFileSync( file_raw ).toString();</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>120</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            pages: &#x27;&#x27;,</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>121</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            views: &#x27;./lib/views&#x27;</td>
+                            <td class="source">            }</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>122</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        };</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>123</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            reply.view( _paths.director+&#x27;director&#x27;, view_options )</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>124</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>124</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">    server.method( [</td>
-                        </tr>
-                        <tr class="hit">
                             <td class="line" data-tooltip>125</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        {</td>
+                            <td class="source">        } )</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>126</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            name: (options.name || &#x27;handler&#x27;)+&#x27;.getOrchestraView&#x27;,</td>
+                            <td class="source">    }</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>127</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            method: getOrchestraView,</td>
+                            <td class="source">}</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>128</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            options: {}</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>129</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">        }] );</td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">exports.register &#x3D; function ( server, options, next ) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>130</td>
@@ -1406,47 +1406,137 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>131</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">    next();</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">    _templates &#x3D; options.templates || [&#x27;head&#x27;, &#x27;nav&#x27;, &#x27;icons&#x27;, &#x27;footer&#x27;, &#x27;scripts&#x27;, &#x27;raw&#x27;];</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>132</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">};</td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">    _paths &#x3D; options.paths || {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>133</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">            director: &#x27;orchestra/&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>134</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">exports.register.attributes &#x3D; {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">            templates: &#x27;orchestra/templates/&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>135</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    name: &#x27;page&#x27;,</td>
+                            <td class="source">            pages: &#x27;&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>136</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    version: &#x27;1.0.0&#x27;</td>
+                            <td class="source">            views: &#x27;./lib/views&#x27;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>137</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">};</td>
+                            <td class="source">        };</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>138</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>139</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">    server.method( [</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>140</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">        {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>141</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">            name: (options.name || &#x27;handler&#x27;)+&#x27;.getOrchestraView&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>142</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">            method: getOrchestraView,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>143</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">            options: {}</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>144</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">        }] );</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>145</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>146</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">    next();</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>147</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">};</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>148</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>149</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">exports.register.attributes &#x3D; {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>150</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">    name: &#x27;page&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>151</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">    version: &#x27;1.0.0&#x27;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>152</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">};</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>153</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
@@ -1458,8 +1548,8 @@
                 <h2 id="lib/test/index.js">lib/test/index.js</h2>
                 <div class="stats high">
                     <div class="percentage">100%</div>
-                    <div class="sloc">75</div>
-                    <div class="hits">75</div>
+                    <div class="sloc">77</div>
+                    <div class="hits">77</div>
                     <div class="misses">0</div>
                 </div>
                 <table>
@@ -1511,260 +1601,260 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>7</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">const code &#x3D; require( &quot;code&quot; );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>8</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
-                            <td class="source">const code &#x3D; require( &quot;code&quot; );</td>
+                            <td class="source">const debug &#x3D; require( &#x27;debug&#x27; )( &#x27;hapi_handlers:lib/test/index&#x27; );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>9</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
-                            <td class="source">const debug &#x3D; require( &#x27;debug&#x27; )( &#x27;hapi_handlers:lib/test/index&#x27; );</td>
+                            <td class="source">const Lab &#x3D; require( &quot;lab&quot; );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>10</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
-                            <td class="source">const Lab &#x3D; require( &quot;lab&quot; );</td>
+                            <td class="source">const path &#x3D; require( &#x27;path&#x27; );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>11</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
-                            <td class="source">const path &#x3D; require( &#x27;path&#x27; );</td>
+                            <td class="source">const serverPromise &#x3D; require( &#x27;./test_server.js&#x27; );</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>12</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
-                            <td class="source">const serverPromise &#x3D; require( &#x27;./test_server.js&#x27; );</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>13</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
                             <td class="source">const fs &#x3D; require(&#x27;fs-extra&#x27;);</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>14</td>
+                            <td class="line" data-tooltip>13</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>15</td>
+                            <td class="line" data-tooltip>14</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">let lab &#x3D; exports.lab &#x3D; Lab.script();</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>16</td>
+                            <td class="line" data-tooltip>15</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>17</td>
+                            <td class="line" data-tooltip>16</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">let options &#x3D; {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>18</td>
+                            <td class="line" data-tooltip>17</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">    model: &#x27;test&#x27;</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>19</td>
+                            <td class="line" data-tooltip>18</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>19</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">};</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>20</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">};</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>21</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>22</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
                             <td class="source">// Mock a request</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>23</td>
+                            <td class="line" data-tooltip>22</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">let request &#x3D; {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>24</td>
+                            <td class="line" data-tooltip>23</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">    auth: {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>25</td>
+                            <td class="line" data-tooltip>24</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        credentials: {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>26</td>
+                            <td class="line" data-tooltip>25</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            user: 123</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>27</td>
+                            <td class="line" data-tooltip>26</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        }</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>28</td>
+                            <td class="line" data-tooltip>27</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>28</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>29</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">    payload: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>30</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    payload: {</td>
+                            <td class="source">        &#x27;stuff&#x27;: 1,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>31</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        &#x27;stuff&#x27;: 1,</td>
+                            <td class="source">    },</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>32</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    },</td>
+                            <td class="source">};</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>33</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">};</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>34</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>35</td>
+                            <td class="line" data-tooltip>34</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">let reply&#x3D;{</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>36</td>
+                            <td class="line" data-tooltip>35</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">    view:(name, options)&#x3D;&gt;{</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>37</td>
+                            <td class="line" data-tooltip>36</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>38</td>
+                            <td class="line" data-tooltip>37</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        _done()</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>39</td>
+                            <td class="line" data-tooltip>38</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>40</td>
+                            <td class="line" data-tooltip>39</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">    }</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>41</td>
+                            <td class="line" data-tooltip>40</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>42</td>
+                            <td class="line" data-tooltip>41</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">};</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>43</td>
+                            <td class="line" data-tooltip>42</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>44</td>
+                            <td class="line" data-tooltip>43</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">let _done;</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>45</td>
+                            <td class="line" data-tooltip>44</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">let _copy_from&#x3D;path.join(path.resolve(), &#x27;lib&#x27;, &#x27;views&#x27;,&#x27;orchestra&#x27;, &#x27;templates&#x27;, &#x27;raw.html&#x27;);</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>46</td>
+                            <td class="line" data-tooltip>45</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">let _copy_to&#x3D;path.join(path.resolve(), &#x27;lib&#x27;, &#x27;views&#x27;,&#x27;orchestra&#x27;, &#x27;templates&#x27;, &#x27;raw0.html&#x27;);</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>47</td>
+                            <td class="line" data-tooltip>46</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>48</td>
+                            <td class="line" data-tooltip>47</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">// The order of tests matters!!!</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>49</td>
+                            <td class="line" data-tooltip>48</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">lab.experiment( &quot;hapi page view&quot;, ()&#x3D;&gt; {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>49</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>50</td>
@@ -1776,139 +1866,139 @@
                             <td class="line" data-tooltip>51</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">    lab.after(done&#x3D;&gt;{</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>52</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    lab.after(done&#x3D;&gt;{</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>53</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>54</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
                             <td class="source">        fs.copySync(_copy_to, _copy_from)</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>55</td>
+                            <td class="line" data-tooltip>54</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        fs.removeSync(_copy_to)</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>56</td>
+                            <td class="line" data-tooltip>55</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>57</td>
+                            <td class="line" data-tooltip>56</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        done()</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>58</td>
+                            <td class="line" data-tooltip>57</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>59</td>
+                            <td class="line" data-tooltip>58</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">    });</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>60</td>
+                            <td class="line" data-tooltip>59</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>61</td>
+                            <td class="line" data-tooltip>60</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">    lab.test( &#x27;Test getOrchestraView&#x27;, (done)&#x3D;&gt;{</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>62</td>
+                            <td class="line" data-tooltip>61</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>63</td>
+                            <td class="line" data-tooltip>62</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        serverPromise( options ).then( server &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>64</td>
+                            <td class="line" data-tooltip>63</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>65</td>
+                            <td class="line" data-tooltip>64</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            request.server &#x3D; server;</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>66</td>
+                            <td class="line" data-tooltip>65</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>67</td>
+                            <td class="line" data-tooltip>66</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">            let view &#x3D; server.methods.handler.getOrchestraView({name:&#x27;main&#x27;});</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>68</td>
+                            <td class="line" data-tooltip>67</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>69</td>
+                            <td class="line" data-tooltip>68</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">            _done&#x3D;done;</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>70</td>
+                            <td class="line" data-tooltip>69</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">            view({}, reply)</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>71</td>
+                            <td class="line" data-tooltip>70</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">            console.dir(view)</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>72</td>
+                            <td class="line" data-tooltip>71</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>73</td>
+                            <td class="line" data-tooltip>72</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">            debug(view, JSON.stringify(view, null, 4))</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>73</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>74</td>
@@ -1920,175 +2010,175 @@
                             <td class="line" data-tooltip>75</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">        } )</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>76</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        } )</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>77</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">    });</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>78</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    });</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>79</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">    lab.test( &#x27;Test getOrchestraView with callbacks, exclude, include, no raw.html and params&#x27;, (done)&#x3D;&gt;{</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>80</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">    lab.test( &#x27;Test getOrchestraView with callbacks, exclude, no raw.html&#x27;, (done)&#x3D;&gt;{</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>81</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">        options.templates &#x3D; [&#x27;head&#x27;,&#x27;icons&#x27;, &#x27;footer&#x27;, &#x27;scripts&#x27;, &#x27;raw&#x27;];</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>82</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">        options.templates &#x3D; [&#x27;head&#x27;, &#x27;nav&#x27;, &#x27;icons&#x27;, &#x27;footer&#x27;, &#x27;scripts&#x27;, &#x27;raw&#x27;];</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>83</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        options.paths &#x3D; {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>84</td>
+                            <td class="line" data-tooltip>83</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            director: &#x27;orchestra/&#x27;,</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>85</td>
+                            <td class="line" data-tooltip>84</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            templates: &#x27;orchestra/templates/&#x27;,</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>86</td>
+                            <td class="line" data-tooltip>85</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            pages: &#x27;&#x27;,</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>87</td>
+                            <td class="line" data-tooltip>86</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            views: &#x27;./lib/views&#x27;</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>88</td>
+                            <td class="line" data-tooltip>87</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        };</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>89</td>
+                            <td class="line" data-tooltip>88</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        options.name&#x3D;&#x27;controller&#x27;;</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>90</td>
+                            <td class="line" data-tooltip>89</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>91</td>
+                            <td class="line" data-tooltip>90</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        serverPromise( options ).then( server &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>92</td>
+                            <td class="line" data-tooltip>91</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>93</td>
+                            <td class="line" data-tooltip>92</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            fs.copySync(_copy_from, _copy_to)</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>94</td>
+                            <td class="line" data-tooltip>93</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">            fs.removeSync(_copy_from)</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>95</td>
+                            <td class="line" data-tooltip>94</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>96</td>
+                            <td class="line" data-tooltip>95</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">            request.server &#x3D; server;</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>97</td>
+                            <td class="line" data-tooltip>96</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>98</td>
+                            <td class="line" data-tooltip>97</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">            let view &#x3D; server.methods.controller.getOrchestraView({</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>99</td>
+                            <td class="line" data-tooltip>98</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">                name:&#x27;main&#x27;,</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>100</td>
+                            <td class="line" data-tooltip>99</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">                callbacks:[(req, params, done)&#x3D;&gt;{done()}],</td>
                         </tr>
                         <tr class="hit">
+                            <td class="line" data-tooltip>100</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                exclude:[&#x27;head&#x27;],</td>
+                        </tr>
+                        <tr class="hit">
                             <td class="line" data-tooltip>101</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                exclude:[&#x27;head&#x27;]</td>
+                            <td class="source">                include:[ &#x27;nav&#x27; ],</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>102</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            });</td>
+                            <td class="source">                params:{}</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>103</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">            });</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>104</td>
@@ -2111,38 +2201,38 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>107</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">            _done&#x3D;done;</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>108</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
-                            <td class="source">            view({}, reply);</td>
+                            <td class="source">            _done&#x3D;done;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>109</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
-                            <td class="source">            console.dir(view);</td>
+                            <td class="source">            view({}, reply);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>110</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">            console.dir(view);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>111</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">            debug(view, JSON.stringify(view, null, 4))</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>112</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">            debug(view, JSON.stringify(view, null, 4))</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>113</td>
@@ -2154,28 +2244,34 @@
                             <td class="line" data-tooltip>114</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        } )</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>115</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">        } )</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>116</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    });</td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>117</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">    });</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>118</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>119</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">})</td>
