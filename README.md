@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/mickelindahl/hapi_handlers_waterline.svg?branch=master)](https://travis-ci.org/mickelindahl/hapi_waterline_handlers)
-[![Coverage Status](https://coveralls.io/repos/github/mickelindahl/hapi_handlers_waterline/badge.svg?branch=master)](https://coveralls.io/github/mickelindahl/hapi_waterline_handlers?branch=master)
+[![Build Status](https://travis-ci.org/mickelindahl/hapi_orchestra_view.svg?branch=master)](https://travis-ci.org/mickelindahl/hapi_orchestra_view)
+[![Coverage Status](https://coveralls.io/repos/github/mickelindahl/hapi_orchestra/badge.svg?branch=master)](https://coveralls.io/github/mickelindahl/hapi_orchestra_view?branch=master)
 
 # Hapi orchestra view
  
