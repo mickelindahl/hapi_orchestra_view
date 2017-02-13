@@ -1,4 +1,7 @@
-# Page view
+[![Build Status](https://travis-ci.org/mickelindahl/hapi_handlers_waterline.svg?branch=master)](https://travis-ci.org/mickelindahl/hapi_waterline_handlers)
+[![Coverage Status](https://coveralls.io/repos/github/mickelindahl/hapi_handlers_waterline/badge.svg?branch=master)](https://coveralls.io/github/mickelindahl/hapi_waterline_handlers?branch=master)
+
+# Hapi orchestra view
  
 Library for composing page views. A director.html file us used to compose 
 the input from a set of general templates (.i.e head.html, scripts.html or 
@@ -12,9 +15,66 @@ the parameters defined in `options.params` is used.
 Copy files in `lib/views` to preferred folder in project
  
 Open the `director.html` and edit it accordingly to your preference. Each 
-handlebar '{{{...}}}' import corresponds to the compiled output (except for 
-`raw.html`) of files in `lib/view/templates`. 
+triple handlebar import corresponds to the compiled output (except for
+`raw.html`) of files in `lib/view/templates`.
 
-Run `npm install --save "git+https://x-oauth-basic@github.com/mickelindahl/hapi_page_view.git`
+Run `npm install --save "git+https://x-oauth-basic@github.com/mickelindahl/hapi_orchestra_view.git`
   
 
+## Usage
+```js
+'use strict'
+
+const Hapi = require( 'hapi' );
+
+const server = new Hapi.Server( { port: 3000 } );
+
+server.register( {
+    register: require( 'hapi-page-view' ),
+    options: { 
+        views: ['head', 'nav', 'footer', 'scripts', 'raw']
+    }
+}).then(()=>{
+
+    server.route([
+        {
+         method: 'GET',
+         path: '/'
+         handler: server.methods.handler.getPage({name:'main'])),
+        }
+    ])
+   
+});
+```
+
+- `options` Object with the following keys
+  - `name` [optional] name of object that are attached to server.methods holding library function/s
+  - `templates` Array List with names of parts files to include
+  - `paths` Object with the following keys
+    - `director` String Path relative view folder to `director.html` file
+    - `parts` String Path relative view folder to `parts` directory
+    - `pages` String Path relative view folder to `pages` directory
+    - `views` String Path to view folder
+
+## Methods
+
+The `handler` is attached to hapijs `server.methods`
+
+<a name="server.methods.module_handler"></a>
+
+## handler
+<a name="server.methods.module_handler..getOrchestraView"></a>
+
+### handler~getOrchestraView() ⇒ <code>Promise</code>
+Create a view by composing files in the  `templates` directory through the `director.html`- `options` Object with the following keys  - `callbacks` Array with functions `function(request, params, done)  - `exclude` String [optional] Name of part files to exclude (without `.html` ending)  - `name` String [required] hapijs server request object  - `params` Object with keys with values that are made avialable to templates in handlebar compilation
+
+**Kind**: inner method of <code>[handler](#server.methods.module_handler)</code>  
+## Test
+`npm run-script test`
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the 
+existing coding style. Add unit tests for any new or changed 
+functionality. Lint and test your code.
+
+## Release History
