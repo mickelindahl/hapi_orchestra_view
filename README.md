@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/mickelindahl/hapi_orchestra_view.svg?branch=master)](https://travis-ci.org/mickelindahl/hapi_orchestra_view)
-[![Coverage Status](https://coveralls.io/repos/github/mickelindahl/hapi_orchestra/badge.svg?branch=master)](https://coveralls.io/github/mickelindahl/hapi_orchestra_view?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/mickelindahl/hapi_orchestra_view/badge.svg?branch=master)](https://coveralls.io/github/mickelindahl/hapi_orchestra_view?branch=master)
 
 # Hapi orchestra view
  
@@ -66,7 +66,15 @@ The `handler` is attached to hapijs `server.methods`
 <a name="server.methods.module_handler..getOrchestraView"></a>
 
 ### handler~getOrchestraView() ⇒ <code>Promise</code>
-Create a view by composing files in the  `templates` directory through the `director.html`- `options` Object with the following keys  - `callbacks` Array with functions `function(request, params, done)  - `exclude` String [optional] Name of part files to exclude (without `.html` ending)  - `name` String [required] hapijs server request object  - `params` Object with keys with values that are made avialable to templates in handlebar compilation
+Create a view by composing files in the  `templates` directory
+ through the `director.html`
+
+- `options` Object with the following keys
+  - `callbacks` Array with functions `function(request, params, done)
+  - `exclude` String [optional] Name of part files to exclude (without `.html` ending)
+  - `include` String [optional] Name of part files to include (without `.html` ending)
+  - `name` String [required] hapijs server request object
+  - `params` Object with keys with values that are made avialable to templates in handlebar compilation
 
 **Kind**: inner method of <code>[handler](#server.methods.module_handler)</code>  
 ## Test
