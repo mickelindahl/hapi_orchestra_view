@@ -3,11 +3,11 @@
 
 # Hapi orchestra view
  
-Library for composing page views. A director.html file us used to compose 
-the input from a set of general templates (.i.e head.html, scripts.html or 
-footer.html) plus the main body of the web page. Each of the templates 
-except `raw.html` are compiled using handlebars. For all compilations
-the parameters defined in `options.params` is used.
+Library for composing page views through a director that orchestrates
+templates into a view. A director.html file is used to compose
+the input from a number of templates where templates
+except `raw.html` are compiled using handlebars. Parameters in
+`options.params` are available to all templates.
  
 
 ## Installation
@@ -40,7 +40,7 @@ server.register( {
         {
          method: 'GET',
          path: '/'
-         handler: server.methods.handler.getPage({name:'main'])),
+         handler: server.methods.handler.getPage({name:'main']}),
         }
     ])
    

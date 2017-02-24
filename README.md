@@ -74,7 +74,7 @@ Create a view by composing files in the  `templates` directory
   - `exclude` String [optional] Name of part files to exclude (without `.html` ending)
   - `include` String [optional] Name of part files to include (without `.html` ending)
   - `name` String [required] hapijs server request object
-  - `params` Object with keys with values that are made avialable to templates in handlebar compilation
+  - `params` Object `{key:values}` made available to templates for `handlebars.compile`
 
 **Kind**: inner method of <code>[handler](#server.methods.module_handler)</code>  
 ## Test
