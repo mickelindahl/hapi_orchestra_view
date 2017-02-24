@@ -3,11 +3,11 @@
 
 # Hapi orchestra view
  
-Library for composing page views. A director.html file us used to compose 
-the input from a set of general templates (.i.e head.html, scripts.html or 
-footer.html) plus the main body of the web page. Each of the templates 
-except `raw.html` are compiled using handlebars. For all compilations
-the parameters defined in `options.params` is used.
+Library for composing page views through a director that orchestrates
+templates into a view. A director.html file is used to compose
+the input from a number of templates where templates
+except `raw.html` are compiled using handlebars. Parameters in
+`options.params` are available to all templates.
  
 
 ## Installation
@@ -40,7 +40,7 @@ server.register( {
         {
          method: 'GET',
          path: '/'
-         handler: server.methods.handler.getPage({name:'main'])),
+         handler: server.methods.handler.getPage({name:'main']}),
         }
     ])
    
@@ -63,6 +63,26 @@ The `handler` is attached to hapijs `server.methods`
 <a name="server.methods.module_handler"></a>
 
 ## handler
+
+* [handler](#server.methods.module_handler)
+    * _static_
+        * [.register()](#server.methods.module_handler.register)
+    * _inner_
+        * [~getOrchestraView()](#server.methods.module_handler..getOrchestraView) ⇒ <code>Promise</code>
+
+<a name="server.methods.module_handler.register"></a>
+
+### handler.register()
+- `options` Object with the following keys
+  - `name` [optional] name of object that are attached to server.methods holding library function/s
+  - `templates` Array List with names of parts files to include
+  - `paths` Object with the following keys
+    - `director` String Path relative view folder to `director.html` file
+    - `parts` String Path relative view folder to `parts` directory
+    - `pages` String Path relative view folder to `pages` directory
+    - `views` String Path to view folder
+
+**Kind**: static method of <code>[handler](#server.methods.module_handler)</code>  
 <a name="server.methods.module_handler..getOrchestraView"></a>
 
 ### handler~getOrchestraView() ⇒ <code>Promise</code>
@@ -73,8 +93,10 @@ Create a view by composing files in the  `templates` directory
   - `callbacks` Array with functions `function(request, params, done)
   - `exclude` String [optional] Name of part files to exclude (without `.html` ending)
   - `include` String [optional] Name of part files to include (without `.html` ending)
-  - `name` String [required] hapijs server request object
   - `params` Object `{key:values}` made available to templates for `handlebars.compile`
+  - `substitute` object with contains `key:value` pairs where key is a
+  default template name (excluding .html)  and value is relative or full
+  path to a substitute template.
 
 **Kind**: inner method of <code>[handler](#server.methods.module_handler)</code>  
 ## Test
