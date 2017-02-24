@@ -18,7 +18,7 @@ Open the `director.html` and edit it accordingly to your preference. Each
 triple handlebar import corresponds to the compiled output (except for
 `raw.html`) of files in `lib/view/templates`.
 
-Run `npm install --save "git+https://x-oauth-basic@github.com/mickelindahl/hapi_orchestra_view.git`
+Run `npm install --save git+https://x-oauth-basic@github.com/mickelindahl/hapi_orchestra_view.git`
   
 
 ## Usage
