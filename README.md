@@ -40,21 +40,12 @@ server.register( {
         {
          method: 'GET',
          path: '/'
-         handler: server.methods.handler.getPage({name:'main']}),
+         handler: server.methods.handler.getOrchestraView({name:'main']}),
         }
     ])
    
 });
 ```
-
-- `options` Object with the following keys
-  - `name` [optional] name of object that are attached to server.methods holding library function/s
-  - `templates` Array List with names of parts files to include
-  - `paths` Object with the following keys
-    - `director` String Path relative view folder to `director.html` file
-    - `parts` String Path relative view folder to `parts` directory
-    - `pages` String Path relative view folder to `pages` directory
-    - `views` String Path to view folder
 
 ## Methods
 
@@ -73,14 +64,20 @@ The `handler` is attached to hapijs `server.methods`
 <a name="server.methods.module_handler.register"></a>
 
 ### handler.register()
+Hapi plugin options
+
 - `options` Object with the following keys
   - `name` [optional] name of object that are attached to server.methods holding library function/s
-  - `templates` Array List with names of parts files to include
-  - `paths` Object with the following keys
-    - `director` String Path relative view folder to `director.html` file
-    - `parts` String Path relative view folder to `parts` directory
-    - `pages` String Path relative view folder to `pages` directory
-    - `views` String Path to view folder
+  - `templates` {array} List with available templates. Multiple templates having the same `name` will
+  be merged
+    - `[].id` {string} Template identifier
+    - `[].param` {string} Director parameter name where template should be inserted
+    - `[].path` {string} Path to template relative view directory
+    - `[].compile` {boolean} Indicates weather template should be compiled or not
+  - `directors` {array} List with available directors
+      - `[].id` {string} Director identifier
+      - `[].path` {string} Path to director
+  - `views` {string} Path to view folder
 
 **Kind**: static method of <code>[handler](#server.methods.module_handler)</code>  
 <a name="server.methods.module_handler..getOrchestraView"></a>
@@ -89,14 +86,14 @@ The `handler` is attached to hapijs `server.methods`
 Create a view by composing files in the  `templates` directory
  through the `director.html`
 
-- `options` Object with the following keys
-  - `callbacks` Array with functions `function(request, params, done)
-  - `exclude` String [optional] Name of part files to exclude (without `.html` ending)
-  - `include` String [optional] Name of part files to include (without `.html` ending)
+- `options` {object} with the following keys
+  - `callbacks` {array} Array with callback
+    - `[](request, params, done)` {callback}
+      - `request` {object} hapijs request object
+      - `params` {object} object holding params used at template compilation
+      - `done` {promise.resolve} Function called at completion
+  - `include` {string} Template ids to include
   - `params` Object `{key:values}` made available to templates for `handlebars.compile`
-  - `substitute` object with contains `key:value` pairs where key is a
-  default template name (excluding .html)  and value is relative or full
-  path to a substitute template.
 
 **Kind**: inner method of <code>[handler](#server.methods.module_handler)</code>  
 ## Test
