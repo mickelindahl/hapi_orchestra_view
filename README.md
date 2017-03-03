@@ -31,8 +31,15 @@ const server = new Hapi.Server( { port: 3000 } );
 
 server.register( {
     register: require( 'hapi-page-view' ),
-    options: { 
-        views: ['head', 'nav', 'footer', 'scripts', 'raw']
+    options:  {
+        templates: [
+        { id: 'my_head', param: 'head', path: 'orchestra/templates/head.html', compile:true },
+        { id: 'my_body', param: 'body', path: 'main.html', compile:true },
+        { id: 'my_raw', param: 'raw', path: 'orchestra/templates/raw.html', compile:false },
+        ],
+        directors: [{ id: 'my_director', path: 'orchestra/director.html' }],
+        views: './lib/views',
+        name: 'controller'
     }
 }).then(()=>{
 
@@ -40,10 +47,13 @@ server.register( {
         {
          method: 'GET',
          path: '/'
-         handler: server.methods.handler.getOrchestraView({name:'main']}),
+         handler: server.methods.handler.getOrchestraView({
+                director:'my_director',
+                include: ['my_head', 'my_body','my_body_2',  'my_raw', 'my_wrong'],
+                params: {title:'A title'}
+            }),
         }
     ])
-   
 });
 ```
 
@@ -92,6 +102,7 @@ Create a view by composing files in the  `templates` directory
       - `request` {object} hapijs request object
       - `params` {object} object holding params used at template compilation
       - `done` {promise.resolve} Function called at completion
+  - `director` {string} id of director to use
   - `include` {string} Template ids to include
   - `params` Object `{key:values}` made available to templates for `handlebars.compile`
 
