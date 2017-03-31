@@ -1,6 +1,6 @@
 {
   "name": "hapi-orchestra-view",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for composing web-page views",
   "main": "lib/index.js",
   "scripts": {
