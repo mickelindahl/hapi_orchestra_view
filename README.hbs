@@ -47,11 +47,13 @@ server.register( {
         {
          method: 'GET',
          path: '/'
-         handler: server.methods.handler.getOrchestraView({
-                director:'my_director',
-                include: ['my_head', 'my_body','my_body_2',  'my_raw', 'my_wrong'],
-                params: {title:'A title'}
-            }),
+         handler: (request, h)=>{
+                return h.viewOrchestra({
+                        director:'my_director',
+                        include: ['my_head', 'my_body','my_body_2',  'my_raw', 'my_wrong'],
+                        params: {title:'A title'}
+                    }),
+            }
         }
     ])
 });

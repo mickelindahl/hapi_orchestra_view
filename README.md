@@ -47,11 +47,13 @@ server.register( {
         {
          method: 'GET',
          path: '/'
-         handler: server.methods.handler.getOrchestraView({
-                director:'my_director',
-                include: ['my_head', 'my_body','my_body_2',  'my_raw', 'my_wrong'],
-                params: {title:'A title'}
-            }),
+         handler: (request, h)=>{
+                return h.viewOrchestra({
+                        director:'my_director',
+                        include: ['my_head', 'my_body','my_body_2',  'my_raw', 'my_wrong'],
+                        params: {title:'A title'}
+                    }),
+            }
         }
     ])
 });
@@ -67,13 +69,13 @@ The `handler` is attached to hapijs `server.methods`
 
 * [handler](#server.methods.module_handler)
     * _static_
-        * [.register()](#server.methods.module_handler.register)
+        * [.plugin](#server.methods.module_handler.plugin)
     * _inner_
-        * [~getOrchestraView()](#server.methods.module_handler..getOrchestraView) ⇒ <code>Promise</code>
+        * [~viewOrchestra()](#server.methods.module_handler..viewOrchestra) ⇒ <code>Promise</code>
 
-<a name="server.methods.module_handler.register"></a>
+<a name="server.methods.module_handler.plugin"></a>
 
-### handler.register()
+### handler.plugin
 Hapi plugin options
 
 - `options` Object with the following keys
@@ -89,24 +91,23 @@ Hapi plugin options
       - `[].path` {string} Path to director
   - `views` {string} Path to view folder
 
-**Kind**: static method of <code>[handler](#server.methods.module_handler)</code>  
-<a name="server.methods.module_handler..getOrchestraView"></a>
+**Kind**: static property of [<code>handler</code>](#server.methods.module_handler)  
+<a name="server.methods.module_handler..viewOrchestra"></a>
 
-### handler~getOrchestraView() ⇒ <code>Promise</code>
+### handler~viewOrchestra() ⇒ <code>Promise</code>
 Create a view by composing files in the  `templates` directory
  through the `director.html`
 
 - `options` {object} with the following keys
   - `callbacks` {array} Array with callback
-    - `[](request, params, done)` {callback}
-      - `request` {object} hapijs request object
+    - `[]( params, done)` {callback}
       - `params` {object} object holding params used at template compilation
       - `done` {promise.resolve} Function called at completion
   - `director` {string} id of director to use
   - `include` {string} Template ids to include
   - `params` Object `{key:values}` made available to templates for `handlebars.compile`
 
-**Kind**: inner method of <code>[handler](#server.methods.module_handler)</code>  
+**Kind**: inner method of [<code>handler</code>](#server.methods.module_handler)  
 ## Test
 `npm run-script test`
 
