@@ -3,11 +3,12 @@
 
 # Hapi orchestra view
 
-Library for composing page views through a director that orchestrates
-templates into a view. A director.html file is used to compose
-the input from a number of templates where templates
-are compiled using handlebars. The function `h.viewOrchestra(options)` is used to returned
-the final html where `options.params` object holds the parameters available to all templates.
+Library for composing html templates into a single page.
+With a director file you define the skeleton of a page and then it is
+composed from templates. First each template is compiled and then the
+director with the compiled templates as input. The function
+`h.viewOrchestra(options)` is used to returned the final html where
+`options.params` object holds the parameters available to all templates.
 Please se example below for more options.
 
 
