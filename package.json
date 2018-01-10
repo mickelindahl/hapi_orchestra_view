@@ -14,9 +14,9 @@
     "url": "git+ssh://git@github.com/mickelindahl/hapi_orchestra_view.git"
   },
   "keywords": [
-    "handlebars"
-    "mustache"
-    "template"
+    "handlebars",
+    "mustache",
+    "template",
     "view",
     "pages",
     "web-pages",
