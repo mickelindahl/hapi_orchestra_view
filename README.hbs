@@ -3,7 +3,7 @@
 
 # Hapi orchestra view
 
-Library for composing html templates into a single page.
+Library for composing [handlebar](http://handlebarsjs.com/) html templates into a single page.
 With a director file you define the skeleton of a page and then it is
 composed from templates. First each template is compiled and then the
 director with the compiled templates as input. The function
