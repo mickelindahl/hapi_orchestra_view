@@ -97,8 +97,9 @@ Hapi plugin options
   - `views` {string} Path to view folder
   - `actions` {object} Actions that are always evoked
     - `template_id` {string} Template it should add parameters to
-    - `callback(params)` {async function}
+    - `callback(params, h)` {async function}
       - `params` {object} Template parameter object
+      - `h` {object} hapi response toolkit object
 
 **Kind**: static property of [<code>handler</code>](#server.methods.module_handler)  
 <a name="server.methods.module_handler..viewOrchestra"></a>
@@ -111,8 +112,9 @@ Create a view by composing files in the  `templates` directory
   - `callbacks` {array} Array with `async function(params)`.
   The h toolkit instance is available as this e.g. you have
   request at `this.request` and server at `this.request.server`)
-    - `[]( params)` {async function}
+    - `[]( params, h)` {async function}
       - `params` {object} object holding params used at template compilation
+      - `h` {object} hapi response toolkit object
   - `director` {string} id of director to use
   - `include` {string} Template ids to include
   - `params` Object `{key:values}` made available to templates for `handlebars.compile`
