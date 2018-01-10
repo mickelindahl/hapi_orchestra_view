@@ -6,8 +6,9 @@
 Library for composing page views through a director that orchestrates
 templates into a view. A director.html file is used to compose
 the input from a number of templates where templates
-except `raw.html` are compiled using handlebars. Parameters in
-`options.params` are available to all templates.
+are compiled using handlebars. The function `h.viewOrchestra(options)` is used to returned
+the final html where `options.params` object holds the parameters available to all templates.
+Please se example below for more options.
 
 
 ## Installation
@@ -124,5 +125,3 @@ Create a view by composing files in the  `templates` directory
 In lieu of a formal styleguide, take care to maintain the
 existing coding style. Add unit tests for any new or changed
 functionality. Lint and test your code.
-
-## Release History
