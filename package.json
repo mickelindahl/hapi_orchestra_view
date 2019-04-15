@@ -1,6 +1,6 @@
 {
   "name": "hapi-orchestra-view",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "Library for composing handlebar html templates into a single page",
   "main": "lib/index.js",
   "scripts": {
